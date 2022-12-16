@@ -1,0 +1,15 @@
+h1 {
+  color: blue;
+}
+
+iframe {
+  display: inline;
+  margin: 33%;
+}
+
+div a {
+  display: inline;
+
+  padding: 50px;
+
+}
