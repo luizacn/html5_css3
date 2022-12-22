@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alinhamento vertical</title>
+    <style>
+        #container {
+            background-image: url(imagens/target001.png);
+            background-size: 100% 100%;
+            /*faz a imagem acima ocupar 100% do cantainer*/
+
+            position: relative;
+            /*todo posicionamento de um box ou container é por padrão relativo*/
+            height: 96vh;
+            /*faz o container ocupar 96% da altura visível da viewport*/
+
+            padding: 10px;
+            /*com esse padding você consegue ver a lateral do container em relação ao conteúdo*/
+            background-color: purple;
+        }
+
+        #conteudo {
+            background-image: url(imagens/target001.png);
+            background-size: 100% 100%;
+
+            position: absolute;
+            /*quando voçê coloca o posicionamento absoluto no box conteudo podemos configurar duas propriedades muito util left e top para alinhamento vertical*/
+            height: 200px;
+            width: 400px;
+            background-color: yellow;
+            /*alinha o box conteudo exatamente centro do box container, porém tem com referencia o canto superior esquerdo do mesmo*/
+            left: 50%;
+            top: 50%;
+
+            transform: translate(-50%, -50%);
+            /*alinha o box conteudo exatamente no mesmo centro do box container, semelhante a um plano carteziano*/
+        }
+    </style>
+</head>
+
+<body>
+    <section id="container">
+        <article id="conteudo">
+
+        </article>
+    </section>
+</body>
+
+</html>
