@@ -11,9 +11,23 @@
             font-family: Arial, Helvetica, sans-serif;
         }
 
+        h1 {
+            width: 450px;
+            text-align: center;
+        }
+
+        caption {
+            font-size: 1.2em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
+        }
+
         table {
-            width: 500px;
+            width: 450px;
             border-collapse: collapse;
+            position: relative;
+            /*primeiro passo para quando for rolar a  planilha, congelar título na parte superior*/
         }
 
         th,
@@ -28,6 +42,18 @@
             color: white;
         }
 
+        /*efeito zebrado (2n) a cada duas linha será colocada uma tarja cinza, caso precise de mais espaçamento é só mudar para (3n), (4n), etc.., também no lugar de (2n), posso usar (odd) para impar ou (even) para par*/
+        tbody>tr:nth-child(2n) {
+            background-color: lightgray;
+        }
+
+        /*segundo passo para quando for rolar a  planilha, congelar título na parte superior*/
+        thead>tr>th {
+            position: sticky;
+            top: -1px;
+            background-color: gray;
+        }
+
         td.num {
             text-align: right;
         }
@@ -37,7 +63,7 @@
 <body>
     <h1>Uso de tabelas grandes</h1>
     <!--ANATONIA PARA TABELAS GRANDES
-    TABLE
+        CAPTION
         THEAD
         TR, TD, TH
         TBODY
@@ -46,10 +72,11 @@
         TR, TD, TH-->
 
     <table>
+        <caption>População das Unidades Federativas do Brasil</caption>
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>População</th>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 100px;">População</th>
             </tr>
         </thead>
 
@@ -193,12 +220,17 @@
 
         <tfoot>
             <tr>
-                <th>Total de Habitantes</th>
+                <th scope="row">Total de Habitantes</th>
                 <td><strong>213 317 639</strong></td>
             </tr>
 
         </tfoot>
     </table>
+
+<h2>Quando começa o texto a tabela some</h2>
+
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi repudiandae dolor explicabo illo aspernatur nisi corporis suscipit provident sit ut. Assumenda labore eaque, totam maiores dolores adipisci culpa nostrum tenetur. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit dolorum eius architecto facere pariatur temporibus autem molestiae quidem officiis, voluptatem id ducimus nisi fuga, quod quae saepe non explicabo esse! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, dignissimos? Quidem nesciunt ratione sapiente officia est eius libero cum ad aliquid veritatis, pariatur temporibus ut ex eaque rerum voluptatem et. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum eius fugiat quasi, sit magni ullam saepe veritatis magnam. Iusto quasi hic eos sint voluptate distinctio ipsam eum ad illum consequatur! Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, ipsum. Ad deserunt quae nihil sit aut amet itaque reprehenderit, officiis perspiciatis non nemo ipsam error sunt eveniet, sint quasi id. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium ipsum cumque, atque omnis quaerat reprehenderit accusamus magnam illo eaque earum. In quisquam fugit maxime! Aut cupiditate adipisci reprehenderit beatae iure? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, dicta! Perferendis illo eveniet atque aut? Et animi aliquid a iste, qui repellat debitis vitae eum veritatis vel nesciunt modi aliquam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic ipsum deserunt quidem saepe, natus vel sit incidunt doloribus! Quidem, consectetur? Voluptatum assumenda laboriosam error distinctio ipsa tenetur, deserunt quasi quibusdam! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam nihil, explicabo commodi facere officia nam eveniet sit? Velit ducimus nihil facere at, eos, veritatis quidem, cum iste fugiat voluptas natus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum laboriosam placeat voluptates quaerat ratione odio accusantium! Voluptates voluptate accusamus totam ex nihil, excepturi unde cum delectus sunt voluptatum modi dolores? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda amet repellat numquam pariatur, dolor fugiat blanditiis, non vitae commodi mollitia rem. Blanditiis illum porro natus ut reprehenderit deleniti similique reiciendis? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid, aspernatur exercitationem eligendi hic nemo obcaecati itaque possimus sequi sed veniam commodi corrupti iste dolor quia quibusdam repellat quod cumque quo? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non quo similique dolorum deserunt vitae provident iusto officiis! Veritatis soluta recusandae dignissimos officiis libero delectus inventore. Obcaecati eum sit nam itaque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab rem inventore delectus magnam ea labore adipisci cupiditate. Ratione aliquam necessitatibus error magnam doloremque saepe repudiandae molestiae. Illum perferendis itaque quidem?</p>
+
 </body>
 
 </html>
